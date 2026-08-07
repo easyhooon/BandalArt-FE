@@ -35,13 +35,19 @@ function StoreLinks({ compact = false }: { compact?: boolean }) {
   return (
     <div className={`store-links${compact ? ' store-links--compact' : ''}`} aria-label="앱 다운로드">
       <a href={APP_STORE_URL} target="_blank" rel="noreferrer" className="store-button store-button--dark">
-        <span className="store-button__caption">iPhone에서</span>
-        <strong>App Store</strong>
+        <img className="store-button__brand-icon" src="/assets/apple.svg" alt="" width="22" height="22" />
+        <span className="store-button__label">
+          <span className="store-button__caption">iPhone에서</span>
+          <strong>App Store</strong>
+        </span>
         <span aria-hidden="true" className="store-button__arrow">↗</span>
       </a>
       <a href={PLAY_STORE_URL} target="_blank" rel="noreferrer" className="store-button store-button--light">
-        <span className="store-button__caption">Android에서</span>
-        <strong>Google Play</strong>
+        <img className="store-button__brand-icon" src="/assets/googleplay.svg" alt="" width="22" height="22" />
+        <span className="store-button__label">
+          <span className="store-button__caption">Android에서</span>
+          <strong>Google Play</strong>
+        </span>
         <span aria-hidden="true" className="store-button__arrow">↗</span>
       </a>
     </div>
