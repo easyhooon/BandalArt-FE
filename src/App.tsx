@@ -217,12 +217,21 @@ function App() {
 
         <section className="download" id="download" aria-labelledby="download-title">
           <div className="download__inner">
-            <img src="/app-icon.png" alt="" width="104" height="104" className="download__icon" />
-            <div className="download__copy">
-              <p>오늘의 한 칸부터 시작해요</p>
-              <h2 id="download-title">당신의 목표를<br />더욱 선명하게.</h2>
+            <img
+              src="/assets/store-graphic.png"
+              alt="당신의 목표를 더욱 선명하게, 반다라트 앱 화면"
+              width="512"
+              height="250"
+              className="download__graphic"
+              loading="lazy"
+            />
+            <div className="download__content">
+              <div className="download__copy">
+                <p>오늘의 한 칸부터 시작해요</p>
+                <h2 id="download-title">지금 반다라트를<br />시작해 보세요.</h2>
+              </div>
+              <StoreLinks compact />
             </div>
-            <StoreLinks compact />
           </div>
         </section>
       </main>

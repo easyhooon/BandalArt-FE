@@ -692,15 +692,22 @@ img {
 
 .download__inner {
   display: grid;
-  grid-template-columns: auto minmax(280px, 1fr) auto;
+  grid-template-columns: minmax(0, 512px) minmax(280px, 1fr);
   align-items: center;
-  gap: 34px;
+  gap: clamp(44px, 7vw, 96px);
 }
 
-.download__icon {
-  width: 104px;
-  border-radius: 28px;
-  box-shadow: 0 16px 30px rgb(17 24 39 / 13%);
+.download__graphic {
+  width: 100%;
+  display: block;
+  border-radius: 24px;
+  box-shadow: 0 24px 48px rgb(17 24 39 / 18%);
+}
+
+.download__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .download__copy > p {
@@ -716,8 +723,8 @@ img {
 }
 
 .store-links--compact {
-  margin-top: 0;
-  justify-content: flex-end;
+  margin-top: 28px;
+  justify-content: flex-start;
 }
 
 .site-footer {
@@ -808,15 +815,6 @@ img {
 
   .support__cards {
     max-width: 680px;
-  }
-
-  .download__inner {
-    grid-template-columns: auto 1fr;
-  }
-
-  .store-links--compact {
-    grid-column: 1 / -1;
-    justify-content: flex-start;
   }
 
   .footer-inner {
@@ -954,17 +952,22 @@ img {
   }
 
   .download__inner {
-    grid-template-columns: 76px 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
-  .download__icon {
-    width: 76px;
-    border-radius: 22px;
+  .download__graphic {
+    max-width: 512px;
+    margin-inline: auto;
+    border-radius: 18px;
+  }
+
+  .download__content {
+    align-items: stretch;
   }
 
   .store-links--compact {
-    margin-top: 16px;
+    margin-top: 24px;
   }
 
   .footer-inner {
