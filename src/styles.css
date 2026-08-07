@@ -474,6 +474,7 @@ img {
 }
 
 .step-icon--grid {
+  place-content: center;
   grid-template-columns: repeat(5, 4px);
   grid-template-rows: repeat(5, 4px);
   gap: 2px;
