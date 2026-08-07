@@ -131,7 +131,9 @@ function App() {
               </li>
               <li>
                 <span>02</span>
-                <div className="step-icon" aria-hidden="true">▦</div>
+                <div className="step-icon step-icon--grid" aria-hidden="true">
+                  {Array.from({ length: 25 }, (_, index) => <span key={index} />)}
+                </div>
                 <strong>작은 행동으로 나누고</strong>
                 <p>목표를 실천할 수 있는 구체적인 행동으로 25칸을 채워요.</p>
               </li>

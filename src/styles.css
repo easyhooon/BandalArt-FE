@@ -473,6 +473,19 @@ img {
   font-weight: 700;
 }
 
+.step-icon--grid {
+  grid-template-columns: repeat(5, 4px);
+  grid-template-rows: repeat(5, 4px);
+  gap: 2px;
+}
+
+.step-icon--grid span {
+  width: 4px;
+  height: 4px;
+  border-radius: 1px;
+  background: currentColor;
+}
+
 .step-list strong {
   font-size: 23px;
   letter-spacing: -0.04em;
