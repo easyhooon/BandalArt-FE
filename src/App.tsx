@@ -107,6 +107,7 @@ function App() {
           <nav className="header-nav" aria-label="주요 메뉴">
             <a href="#how">사용 방법</a>
             <a href="#features">주요 기능</a>
+            <a href="/privacy">개인정보처리방침</a>
           </nav>
           <a className="header-cta" href="#download">앱 다운로드</a>
         </div>
