@@ -101,7 +101,7 @@ function PrivacyPolicy({ locale }: { locale: PrivacyLocale }) {
         </div>
 
         <article className="privacy-document">
-          <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+          <ReactMarkdown skipHtml remarkPlugins={[remarkGfm]} components={markdownComponents}>
             {policyByLocale[locale]}
           </ReactMarkdown>
         </article>
