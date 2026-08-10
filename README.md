@@ -2,6 +2,12 @@
 
 반다라트의 공식 랜딩 페이지와 AdMob `app-ads.txt`를 제공하는 정적 웹 프로젝트입니다.
 
+개인정보처리방침은 한·영·일 원문을 하나의 Markdown 파일로 관리하고 다음 경로에서 제공합니다.
+
+- 한국어: `/privacy`
+- English: `/en/privacy`
+- 日本語: `/ja/privacy`
+
 ## 개발
 
 ```bash

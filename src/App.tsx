@@ -1,3 +1,6 @@
+import PrivacyPolicy from './PrivacyPolicy'
+import { getPrivacyLocale } from './privacyRoutes'
+
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.nexters.bandalart'
 const APP_STORE_URL =
   'https://apps.apple.com/kr/app/%EB%B0%98%EB%8B%A4%EB%9D%BC%ED%8A%B8-%EB%B6%80%EB%8B%B4-%EC%97%86%EB%8A%94-%EB%A7%8C%EB%8B%A4%EB%9D%BC%ED%8A%B8-%EA%B3%84%ED%9A%8D%ED%91%9C/id6743101965'
@@ -85,6 +88,12 @@ function BandalartGrid() {
 }
 
 function App() {
+  const privacyLocale = getPrivacyLocale(window.location.pathname)
+
+  if (privacyLocale) {
+    return <PrivacyPolicy locale={privacyLocale} />
+  }
+
   return (
     <div className="site-shell">
       <a className="skip-link" href="#main-content">본문으로 바로가기</a>
@@ -249,6 +258,7 @@ function App() {
             <span>반다라트</span>
           </a>
           <p>부담 없는 만다라트 계획표로 목표를 더욱 선명하게.</p>
+          <a href="/privacy">개인정보처리방침</a>
           <a href={`mailto:${CONTACT_EMAIL}`}>문의하기</a>
           <small>© {new Date().getFullYear()} BandalArt</small>
         </div>

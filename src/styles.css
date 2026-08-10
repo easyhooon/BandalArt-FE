@@ -748,7 +748,7 @@ img {
 
 .footer-inner {
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto 1fr auto auto auto;
   align-items: center;
   gap: 28px;
   color: #ffffff;
@@ -782,6 +782,178 @@ img {
 .site-shell :focus-visible {
   outline: 3px solid var(--mint);
   outline-offset: 4px;
+}
+
+.privacy-shell {
+  background: var(--cloud);
+}
+
+.privacy-header .header-inner {
+  justify-content: space-between;
+}
+
+.privacy-home-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.privacy-home-link:hover {
+  color: #087a58;
+}
+
+.privacy-main {
+  width: min(calc(100% - 48px), 920px);
+  margin-inline: auto;
+  padding-block: clamp(56px, 8vw, 104px);
+}
+
+.privacy-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.privacy-heading .section-label {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.privacy-language {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.privacy-language a {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 12px;
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.privacy-language a[aria-current='page'] {
+  color: #ffffff;
+  background: var(--ink);
+}
+
+.privacy-document {
+  padding: clamp(28px, 5vw, 64px);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 18px 48px rgb(17 24 39 / 6%);
+}
+
+.privacy-document h1 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.16;
+  letter-spacing: -0.05em;
+  word-break: keep-all;
+}
+
+.privacy-document h2 {
+  margin: 64px 0 18px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  font-size: clamp(21px, 3vw, 27px);
+  line-height: 1.35;
+  letter-spacing: -0.035em;
+  word-break: keep-all;
+}
+
+.privacy-document p,
+.privacy-document li {
+  color: var(--body);
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: -0.02em;
+}
+
+.privacy-document p {
+  margin: 16px 0 0;
+}
+
+.privacy-document ul,
+.privacy-document ol {
+  margin: 16px 0 0;
+  padding-left: 24px;
+}
+
+.privacy-document a {
+  color: #087a58;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.privacy-document code {
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: var(--ink);
+  background: var(--mint-soft);
+  font: inherit;
+}
+
+.privacy-table-wrap {
+  max-width: 100%;
+  margin-top: 24px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.privacy-table-wrap table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.privacy-table-wrap th,
+.privacy-table-wrap td {
+  padding: 14px 16px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.privacy-table-wrap th:last-child,
+.privacy-table-wrap td:last-child {
+  border-right: 0;
+}
+
+.privacy-table-wrap tr:last-child td {
+  border-bottom: 0;
+}
+
+.privacy-table-wrap th {
+  color: var(--ink);
+  background: var(--cloud);
+  font-weight: 700;
+}
+
+.privacy-footer .footer-inner {
+  grid-template-columns: auto 1fr auto auto;
 }
 
 @keyframes hero-copy-in {
@@ -842,6 +1014,10 @@ img {
   }
 
   .footer-inner {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .privacy-footer .footer-inner {
     grid-template-columns: auto 1fr auto;
   }
 
@@ -997,6 +1173,39 @@ img {
   .footer-inner {
     grid-template-columns: 1fr;
     gap: 14px;
+  }
+
+  .privacy-main {
+    width: min(calc(100% - 32px), 920px);
+    padding-block: 40px 72px;
+  }
+
+  .privacy-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .privacy-language {
+    width: 100%;
+  }
+
+  .privacy-language a {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .privacy-document {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+
+  .privacy-document h2 {
+    margin-top: 48px;
+  }
+
+  .privacy-document p,
+  .privacy-document li {
+    font-size: 15px;
   }
 
   .footer-inner > a:not(.brand) {
